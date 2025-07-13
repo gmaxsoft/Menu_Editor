@@ -10,8 +10,9 @@ export class Item implements ElementItem {
   protected dataset: ItemDataset;
   protected collection: Collection;
   protected options: ItemOptions = { sortableClassname: 'nested-sortable' }
-  protected listenerEditButton: Itemlistener = () => {};
-  protected listenerDeleteButton: Itemlistener = () => {};
+  protected listenerEditButton: Itemlistener = () => { };
+  protected listenerDeleteButton: Itemlistener = () => { };
+  protected listenerLinkButton: Itemlistener = () => { };
   public buttonGroup: ButtonGroup;
 
   constructor(data: ItemData) {
@@ -33,6 +34,10 @@ export class Item implements ElementItem {
     return this.dataset;
   }
 
+  public setListenerLinkButton(listener: Itemlistener) {
+    this.listenerLinkButton = listener;
+  }
+
   public setListenerEditButton(listener: Itemlistener) {
     this.listenerEditButton = listener;
   }
@@ -40,7 +45,7 @@ export class Item implements ElementItem {
   public setListenerDeleteButton(listener: Itemlistener) {
     this.listenerDeleteButton = listener;
   }
-  
+
   public add(item: ElementItem) {
     this.collection.add(item);
   }
@@ -64,8 +69,10 @@ export class Item implements ElementItem {
     data.forEach((item) => {
       let mi = new Item(item);
       mi.setOptions(this.options);
+      mi.setListenerLinkButton(this.listenerLinkButton);
       mi.setListenerDeleteButton(this.listenerDeleteButton);
       mi.setListenerEditButton(this.listenerEditButton);
+      mi.buttonGroup.onClickLink(this.listenerLinkButton);
       mi.buttonGroup.onClickDelete(this.listenerDeleteButton);
       mi.buttonGroup.onClickEdit(this.listenerEditButton);
       setDatasetToElement(mi.getElement(), mi.getDataset());
