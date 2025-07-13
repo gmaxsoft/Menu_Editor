@@ -1,36 +1,22 @@
 # Menu Editor
 
-Vanilla Javascript Menu Editor Library (made with Typescript). 
+Remake of old Menu Editor Library (made with Typescript), works with Bootstrap 5. 
 
-## [>>> Demo <<<](https://davidticona.com/demos/javascript-menu-editor/)
 
 ## Install
 
 Via NPM
 
 ```
-npm install @davicotico/menu-editor
-```
-
-Via CDN
-
-```html
-<!-- Styles -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/davicotico/menu-editor@1.2.0/dist/styles.min.css">
-
-<!-- and the javascript file -->
-<script src="https://cdn.jsdelivr.net/gh/davicotico/menu-editor@1.2.0/dist/menu-editor.min.js"></script>
-<script>
-	var menuEditor = new MenuEditor('element-id', { maxLevel: 3 });
-</script>
+npm install @gmaxsoft/menu-editor
 ```
 
 ## How to use
 
 ### Imports
 ```js
-import '@davicotico/menu-editor/lib/css/styles.css';
-import { MenuEditor } from '@davicotico/menu-editor';
+import '@gmaxsoft/menu-editor/lib/css/styles.css';
+import { MenuEditor } from '@gmaxsoft/menu-editor';
 ```
 
 ### Creating the object
