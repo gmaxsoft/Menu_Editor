@@ -9,11 +9,13 @@ export declare class Item implements ElementItem {
     protected options: ItemOptions;
     protected listenerEditButton: Itemlistener;
     protected listenerDeleteButton: Itemlistener;
+    protected listenerLinkButton: Itemlistener;
     buttonGroup: ButtonGroup;
     constructor(data: ItemData);
     setOptions(options: ItemOptions): void;
     setDataset(dataset: ItemDataset): void;
     getDataset(): ItemDataset;
+    setListenerLinkButton(listener: Itemlistener): void;
     setListenerEditButton(listener: Itemlistener): void;
     setListenerDeleteButton(listener: Itemlistener): void;
     add(item: ElementItem): void;
