@@ -1,5 +1,5 @@
 {
-  "name": "gmaxsoft/Menu_Editor",
+  "name": "@gmaxsoft/menu_editor",
   "version": "1.0.1",
   "description": "Javascript Menu Editor Library (made with Typescript)",
   "main": "./lib/index.js",
@@ -34,14 +34,12 @@
     "menu"
   ],
   "author": {
-    "name": "David Tomas Ticona Saravia",
-    "url": "https://davidticona.com"
+    "name": "Maxsoft"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/davicotico/menu-editor/issues"
+    "url": "https://github.com/gmaxsoft/Menu_Editor/issues"
   },
-  "homepage": "https://davidticona.com/demos/javascript-menu-editor/",
   "devDependencies": {
     "@types/node": "^20.2.1",
     "@types/sortablejs": "^1.15.1",
